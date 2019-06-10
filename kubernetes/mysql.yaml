@@ -24,15 +24,9 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: bapinaidu/mysql:5.7
+        image: bapinaidu/mysql
         ports:
-        - containerPort: 3306
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: pwd-secret
-              key: mysql-root-pwd
+        - containerPort: 3306        
         volumeMounts:
         - name: db-vol
           mountPath: /var/lib/mysql
