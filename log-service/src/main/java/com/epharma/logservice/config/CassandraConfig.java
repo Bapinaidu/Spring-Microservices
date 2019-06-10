@@ -1,4 +1,4 @@
-package com.epharma.logservice.config;
+package com.ebook.logservice.config;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,7 +36,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 
     @Override
     public String[] getEntityBasePackages() {
-        return new String[] { "com.epharma.logservice.model", };
+        return new String[] { "com.ebook.logservice.model", };
     }
 
     @Override

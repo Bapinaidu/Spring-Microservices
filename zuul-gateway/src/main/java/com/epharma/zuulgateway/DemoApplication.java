@@ -1,4 +1,4 @@
-package com.epharma.zuulgateway;
+package com.ebook.zuulgateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.epharma.blogservice.repository;
+package com.ebook.blogservice.repository;
 
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
-import com.epharma.blogservice.model.IModel;
+import com.ebook.blogservice.model.IModel;
 
 import org.hibernate.Session;
 

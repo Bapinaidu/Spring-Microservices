@@ -1,4 +1,4 @@
-package com.epharma.zuulgateway;
+package com.ebook.zuulgateway;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

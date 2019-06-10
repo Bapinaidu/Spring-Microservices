@@ -1,5 +1,5 @@
-package com.epharma.userservice.repository;
-import com.epharma.userservice.model.*;
+package com.ebook.userservice.repository;
+import com.ebook.userservice.model.*;
 import org.hibernate.Session;
 import org.springframework.transaction.annotation.Transactional;
 

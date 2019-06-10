@@ -1,4 +1,4 @@
-package com.epharma.logservice.config;
+package com.ebook.logservice.config;
 
 import com.datastax.driver.core.exceptions.NoHostAvailableException;
 import com.datastax.driver.core.exceptions.TransportException;

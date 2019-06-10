@@ -1,4 +1,4 @@
-package com.epharma.blogservice.config;
+package com.ebook.blogservice.config;
 
 import java.util.Properties;
 
@@ -30,7 +30,7 @@ public class HibernateConfig{
         icemfb.setJpaVendorAdapter(getJpaVendorAdaptor());
         icemfb.setDataSource(dataSource());
         icemfb.setPersistenceUnitName("entityManagerFactory");
-        icemfb.setPackagesToScan("com.epharma.blogservice.model");
+        icemfb.setPackagesToScan("com.ebook.blogservice.model");
         icemfb.setJpaProperties(hibernatProperties());
         return icemfb;
     }

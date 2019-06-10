@@ -1,9 +1,9 @@
-package com.epharma.blogservice.service;
+package com.ebook.blogservice.service;
 
 import java.util.List;
 
-import com.epharma.blogservice.model.Article;
-import com.epharma.blogservice.model.Comment;
+import com.ebook.blogservice.model.Article;
+import com.ebook.blogservice.model.Comment;
 
 public interface ArticleService {
 

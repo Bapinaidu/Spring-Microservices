@@ -1,9 +1,9 @@
-package com.epharma.logservice.repository;
+package com.ebook.logservice.repository;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.epharma.logservice.model.Summary;
+import com.ebook.logservice.model.Summary;
 
 import org.springframework.data.cassandra.repository.Query;
 import org.springframework.data.repository.CrudRepository;

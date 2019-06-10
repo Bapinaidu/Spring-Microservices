@@ -1,8 +1,8 @@
-package com.epharma.blogservice.repository;
+package com.ebook.blogservice.repository;
 
 import java.util.List;
 
-import com.epharma.blogservice.model.IModel;
+import com.ebook.blogservice.model.IModel;
 
 import org.hibernate.Session;
 

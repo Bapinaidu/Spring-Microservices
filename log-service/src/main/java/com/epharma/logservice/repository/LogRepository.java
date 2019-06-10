@@ -1,8 +1,8 @@
-package com.epharma.logservice.repository;
+package com.ebook.logservice.repository;
 
 import java.util.UUID;
 
-import com.epharma.logservice.model.Log;
+import com.ebook.logservice.model.Log;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

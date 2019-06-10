@@ -1,8 +1,8 @@
-package com.epharma.userservice.service;
+package com.ebook.userservice.service;
 
 import java.util.List;
 
-import com.epharma.userservice.model.User;
+import com.ebook.userservice.model.User;
 
 public interface UserService {
     void save(User user);

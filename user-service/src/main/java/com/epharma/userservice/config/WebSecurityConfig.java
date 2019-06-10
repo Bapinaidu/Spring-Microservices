@@ -1,4 +1,4 @@
-package com.epharma.userservice.config;
+package com.ebook.userservice.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

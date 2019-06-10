@@ -1,4 +1,4 @@
-package com.epharma.blogservice.model;
+package com.ebook.blogservice.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;

@@ -1,4 +1,4 @@
-package com.epharma.blogservice.model;
+package com.ebook.blogservice.model;
 
 import java.util.Date;
 import java.util.List;

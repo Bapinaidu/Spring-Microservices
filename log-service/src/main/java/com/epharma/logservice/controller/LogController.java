@@ -1,12 +1,12 @@
-package com.epharma.logservice.controller;
+package com.ebook.logservice.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.epharma.logservice.model.Log;
-import com.epharma.logservice.model.Summary;
-import com.epharma.logservice.service.LogService;
+import com.ebook.logservice.model.Log;
+import com.ebook.logservice.model.Summary;
+import com.ebook.logservice.service.LogService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.epharma.userservice.service;
+package com.ebook.userservice.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

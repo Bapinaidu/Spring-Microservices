@@ -4,7 +4,7 @@
             "type": "java",
             "name": "CodeLens (Launch) - DemoApplication",
             "request": "launch",
-            "mainClass": "com.epharma.userservice.DemoApplication",
+            "mainClass": "com.ebook.userservice.DemoApplication",
             "projectName": "user-service"
         }
     ]

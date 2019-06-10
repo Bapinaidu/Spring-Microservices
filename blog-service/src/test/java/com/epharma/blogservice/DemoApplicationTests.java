@@ -1,4 +1,4 @@
-package com.epharma.blogservice;
+package com.ebook.blogservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,12 +1,12 @@
-package com.epharma.logservice.service;
+package com.ebook.logservice.service;
 
 import java.util.List;
 import java.util.UUID;
 
-import com.epharma.logservice.model.Log;
-import com.epharma.logservice.model.Summary;
-import com.epharma.logservice.repository.LogRepository;
-import com.epharma.logservice.repository.SummaryRepository;
+import com.ebook.logservice.model.Log;
+import com.ebook.logservice.model.Summary;
+import com.ebook.logservice.repository.LogRepository;
+import com.ebook.logservice.repository.SummaryRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

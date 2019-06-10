@@ -1,4 +1,4 @@
-package com.epharma.blogservice.model;
+package com.ebook.blogservice.model;
 
 public enum Status{
     VERIFYING,

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "epharma-client": {
+    "ebook-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/epharma-client",
+            "outputPath": "dist/ebook-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "epharma-client:build"
+            "browserTarget": "ebook-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "epharma-client:build:production"
+              "browserTarget": "ebook-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "epharma-client:build"
+            "browserTarget": "ebook-client:build"
           }
         },
         "test": {
@@ -110,7 +110,7 @@
         }
       }
     },
-    "epharma-client-e2e": {
+    "ebook-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -119,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "epharma-client:serve"
+            "devServerTarget": "ebook-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "epharma-client:serve:production"
+              "devServerTarget": "ebook-client:serve:production"
             }
           }
         },
@@ -139,5 +139,5 @@
       }
     }
   },
-  "defaultProject": "epharma-client"
+  "defaultProject": "ebook-client"
 }

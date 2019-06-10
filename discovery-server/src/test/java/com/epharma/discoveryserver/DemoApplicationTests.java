@@ -1,4 +1,4 @@
-package com.epharma.discoveryserver;
+package com.ebook.discoveryserver;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

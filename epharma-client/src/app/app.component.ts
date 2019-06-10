@@ -10,7 +10,7 @@ import {User} from "./model/user";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'epharma-client';
+  title = 'ebook-client';
   searchText: string;
   currentUser: User;
   private _serviceSubscription;

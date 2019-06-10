@@ -1,4 +1,4 @@
-package com.epharma.userservice;
+package com.ebook.userservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

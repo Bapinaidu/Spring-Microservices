@@ -1,4 +1,4 @@
-package com.epharma.userservice.utils;
+package com.ebook.userservice.utils;
 import java.util.Calendar;
 import java.util.Date;
 

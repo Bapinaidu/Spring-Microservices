@@ -1,11 +1,11 @@
 version: '3.0'
 services:
-    epharma-mysql:
+    ebook-mysql:
         image: mysql:latest
         command: --max_allowed_packet=52505856 --bulk_insert_buffer_size=52505856
         environment:
             - MYSQL_ROOT_PASSWORD=1234
-            - MYSQL_DATABASE=epharma
+            - MYSQL_DATABASE=ebook
             - MYSQL_USER=demo
             - MYSQL_PASSWORD=demo
         ports:
@@ -25,13 +25,13 @@ services:
         ports: 
             - 8761:8761
         links: 
-            - epharma-mysql:mysql
+            - ebook-mysql:mysql
         container_name: discovery_service
     user-service:
         build: ./user-service
         entrypoint: /wait-for-it.sh discovery-service:8761 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar
         links:
-            - epharma-mysql:mysql
+            - ebook-mysql:mysql
         depends_on: 
             - discovery-service
         ports:
@@ -55,10 +55,10 @@ services:
         depends_on:
             - discovery-service
             - user-service
-            - epharma-mysql
+            - ebook-mysql
             - log-service
         links: 
-            - epharma-mysql:mysql
+            - ebook-mysql:mysql
         ports:
             - 8001:8001
         container_name: blog_service
@@ -74,7 +74,7 @@ services:
             - 8765:8765
         container_name: gateway_service
     client-service:
-        build: ./epharma-client
+        build: ./ebook-client
         ports: 
             - 4200:80
         container_name: client_service

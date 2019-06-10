@@ -8,7 +8,7 @@
 		<version>2.1.5.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.epharma</groupId>
+	<groupId>com.ebook</groupId>
 	<artifactId>zuul-gateway</artifactId>
 	<version>0.0.1</version>
 	<name>demo</name>

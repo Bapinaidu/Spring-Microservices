@@ -1,4 +1,4 @@
-package com.epharma.userservice.model;
+package com.ebook.userservice.model;
 
 public enum Role{
     USER,

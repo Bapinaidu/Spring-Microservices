@@ -1,11 +1,11 @@
-package com.epharma.userservice.controller;
+package com.ebook.userservice.controller;
 
 import java.security.Principal;
 import java.util.List;
 
-import com.epharma.userservice.model.Role;
-import com.epharma.userservice.model.User;
-import com.epharma.userservice.service.UserService;
+import com.ebook.userservice.model.Role;
+import com.ebook.userservice.model.User;
+import com.ebook.userservice.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

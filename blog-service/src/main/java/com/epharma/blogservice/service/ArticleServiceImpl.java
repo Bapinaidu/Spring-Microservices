@@ -1,14 +1,14 @@
-package com.epharma.blogservice.service;
+package com.ebook.blogservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import com.epharma.blogservice.model.Article;
-import com.epharma.blogservice.model.Comment;
-import com.epharma.blogservice.repository.ArticleRepository;
-import com.epharma.blogservice.repository.CommentRepository;
+import com.ebook.blogservice.model.Article;
+import com.ebook.blogservice.model.Comment;
+import com.ebook.blogservice.repository.ArticleRepository;
+import com.ebook.blogservice.repository.CommentRepository;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {

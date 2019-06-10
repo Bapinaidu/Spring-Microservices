@@ -1,4 +1,4 @@
-package com.epharma.userservice.config;
+package com.ebook.userservice.config;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class HibernateConf {
         lcemfb.setJpaVendorAdapter(getJpaVendorAdapter());
         lcemfb.setDataSource(dataSource());
         lcemfb.setPersistenceUnitName("entityManagerFactory");
-        lcemfb.setPackagesToScan("com.epharma.userservice.model");
+        lcemfb.setPackagesToScan("com.ebook.userservice.model");
         lcemfb.setJpaProperties(hibernateProperties());
         return lcemfb;
     }

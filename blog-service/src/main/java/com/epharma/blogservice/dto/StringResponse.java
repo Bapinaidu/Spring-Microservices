@@ -1,4 +1,4 @@
-package com.epharma.blogservice.dto;
+package com.ebook.blogservice.dto;
 
 public class StringResponse {
 

@@ -1,4 +1,4 @@
-package com.epharma.userservice.service;
+package com.ebook.userservice.service;
 
 public interface SecurityService {
     String findLoggedInUsername();

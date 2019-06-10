@@ -1,10 +1,10 @@
-package com.epharma.blogservice.repository;
+package com.ebook.blogservice.repository;
 
 import java.util.List;
 
 import javax.persistence.Query;
 
-import com.epharma.blogservice.model.Article;
+import com.ebook.blogservice.model.Article;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

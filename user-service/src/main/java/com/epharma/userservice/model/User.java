@@ -1,4 +1,4 @@
-package com.epharma.userservice.model;
+package com.ebook.userservice.model;
 
 
 import javax.persistence.Column;

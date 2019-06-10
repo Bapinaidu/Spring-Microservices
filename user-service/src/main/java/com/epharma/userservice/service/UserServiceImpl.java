@@ -1,10 +1,10 @@
-package com.epharma.userservice.service;
+package com.ebook.userservice.service;
 
 import java.util.List;
 
-import com.epharma.userservice.model.Role;
-import com.epharma.userservice.model.User;
-import com.epharma.userservice.repository.UserRepository;
+import com.ebook.userservice.model.Role;
+import com.ebook.userservice.model.User;
+import com.ebook.userservice.repository.UserRepository;
 
 
 import org.springframework.beans.factory.annotation.Autowired;

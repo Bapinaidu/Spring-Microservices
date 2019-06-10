@@ -1,32 +1,32 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: epharma-client
+  name: ebook-client
   labels:
-    app: epharma-client
+    app: ebook-client
 spec:
   type: NodePort
   ports:
     - port: 9090
   selector:
-    app: epharma-client
+    app: ebook-client
 ---
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: epharma-client
+  name: ebook-client
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: epharma-client
+      app: ebook-client
   template:
     metadata:
       labels:
-        app: epharma-client
+        app: ebook-client
     spec:
       containers:
-      - name: epharma-client
-        image: bapinaidu/epharma-client
+      - name: ebook-client
+        image: bapinaidu/ebook-client
         ports:
         - containerPort: 9090

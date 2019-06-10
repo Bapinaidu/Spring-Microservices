@@ -1,4 +1,4 @@
-package com.epharma.blogservice.controller;
+package com.ebook.blogservice.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.epharma.blogservice.intercomm.LogClient;
-import com.epharma.blogservice.intercomm.UserClient;
-import com.epharma.blogservice.model.Comment;
-import com.epharma.blogservice.service.ArticleService;
+import com.ebook.blogservice.intercomm.LogClient;
+import com.ebook.blogservice.intercomm.UserClient;
+import com.ebook.blogservice.model.Comment;
+import com.ebook.blogservice.service.ArticleService;
 
 @RestController
 public class ArticleController{
@@ -30,15 +30,6 @@ public class ArticleController{
 
     @Autowired
     private ArticleService articleService;
-
-    // @PostMapping("/users")
-    // public ResponseEntity<?> getUsers(){
-    //     List<Long> list = Arrays.asList(1L,2L,3L);
-    //     List<String> users = userClient.getUsers(list);
-    //     return new ResponseEntity<>(users,HttpStatus.OK);
-    // }
-    // @GetMapping("/article/{id}")
-    // public Article getArticle(@)
 
     @GetMapping("/popular")
     public ResponseEntity<?> popularArticles(){
@@ -84,17 +75,5 @@ public class ArticleController{
         
     }
     
-
-    // @PostMapping("/students")
-    // public ResponseEntity<?> findCourseStudents(@RequestBody Long courseId){
-    //     List<Transaction> list = courseService.filterTransactionsOfCourse(courseId);
-    //     if(list!=null && !list.isEmpty()){
-    //         List<Long> userIdList = list.parallelStream().map(t->t.getUserId()).collect(Collectors.toList());
-    //         List<String> students = userClient.getUsers(userIdList);
-    //         return ResponseEntity.ok(students);
-    //     }
-    //     return ResponseEntity.notFound().build();
-    // }
-
 
 }

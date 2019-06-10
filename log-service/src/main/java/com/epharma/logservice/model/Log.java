@@ -1,4 +1,4 @@
-package com.epharma.logservice.model;
+package com.ebook.logservice.model;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.epharma.userservice;
+package com.ebook.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

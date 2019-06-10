@@ -1,4 +1,4 @@
-package com.epharma.blogservice.intercomm;
+package com.ebook.blogservice.intercomm;
 
 import java.util.List;
 

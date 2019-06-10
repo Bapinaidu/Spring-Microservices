@@ -1,4 +1,4 @@
-package com.epharma.logservice.model;
+package com.ebook.logservice.model;
 
 
 import org.springframework.data.cassandra.core.cql.Ordering;

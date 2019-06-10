@@ -1,4 +1,4 @@
-package com.epharma.logservice.dto;
+package com.ebook.logservice.dto;
 public class StringResponse {
 
     private String response;
