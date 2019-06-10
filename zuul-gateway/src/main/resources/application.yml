@@ -23,9 +23,7 @@ zuul:
     blog:
       path: /blog/**
       serviceId: blog-service
-    log:
-      path: /log/**
-      serviceId: log-service
+  
 
 eureka:
   client:

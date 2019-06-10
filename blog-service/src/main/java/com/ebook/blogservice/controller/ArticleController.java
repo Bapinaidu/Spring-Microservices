@@ -23,22 +23,10 @@ import com.ebook.blogservice.service.ArticleService;
 public class ArticleController{
 
     @Autowired
-    private LogClient logClient;
-
-    @Autowired
     private UserClient userClient;
 
     @Autowired
     private ArticleService articleService;
-
-    @GetMapping("/popular")
-    public ResponseEntity<?> popularArticles(){
-        List<Long> popularIdList = logClient.getPopularArticles();
-        if(popularIdList==null || popularIdList.isEmpty()){
-            return ResponseEntity.notFound().build();
-        }
-        return new ResponseEntity<>(articleService.filterArticleByIdList(popularIdList), HttpStatus.OK);
-    }
 
     @PostMapping("/")
     public ResponseEntity<?> allArticles(){
