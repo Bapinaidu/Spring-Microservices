@@ -1,0 +1,84 @@
+version: '3.0'
+services:
+    epharma-mysql:
+        image: mysql:latest
+        command: --max_allowed_packet=52505856 --bulk_insert_buffer_size=52505856
+        environment:
+            - MYSQL_ROOT_PASSWORD=1234
+            - MYSQL_DATABASE=epharma
+            - MYSQL_USER=demo
+            - MYSQL_PASSWORD=demo
+        ports:
+            - 3306:3306
+        container_name: mysql
+    cassandra:
+        build: ./cassandra
+        ports:
+            - "9042:9042"
+        container_name: cassandra
+    # cassandra:
+    #     image: cassandra:latest
+    #     container_name: cassandra
+    discovery-service:
+        build: ./discovery-server
+        entrypoint: /wait-for-it.sh -t 5000 mysql:3306 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar
+        ports: 
+            - 8761:8761
+        links: 
+            - epharma-mysql:mysql
+        container_name: discovery_service
+    user-service:
+        build: ./user-service
+        entrypoint: /wait-for-it.sh discovery-service:8761 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar
+        links:
+            - epharma-mysql:mysql
+        depends_on: 
+            - discovery-service
+        ports:
+            - 8000:8000
+        container_name: user_service
+    log-service:
+        build: ./log-service
+        environment: 
+            SPRING_DATA_CASSANDRA_CONTACT_POINTS: cassandra
+        entrypoint: /wait-for-it.sh cassandra:9042 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar
+        depends_on:
+            - discovery-service
+            - cassandra
+            
+        ports: 
+            - 8002:8002
+        container_name: log_service
+    blog-service:
+        build: ./blog-service
+        entrypoint: /wait-for-it.sh user-service:8000 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar        
+        depends_on:
+            - discovery-service
+            - user-service
+            - epharma-mysql
+            - log-service
+        links: 
+            - epharma-mysql:mysql
+        ports:
+            - 8001:8001
+        container_name: blog_service
+    gateway-service:
+        build: ./zuul-gateway
+        entrypoint: /wait-for-it.sh blog-service:8001 -- java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -Dspring.profiles.active=container -jar app.jar
+        depends_on:
+            - discovery-service
+            - user-service
+            - blog-service
+            - log-service
+        ports: 
+            - 8765:8765
+        container_name: gateway_service
+    client-service:
+        build: ./epharma-client
+        ports: 
+            - 4200:80
+        container_name: client_service
+
+networks:
+  default:
+    driver: bridge

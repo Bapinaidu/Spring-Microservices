@@ -1,0 +1,44 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+  
+    <changeSet author="test" id="200320193">
+        <sql>
+            CREATE TABLE articles (
+                id BIGINT NOT NULL AUTO_INCREMENT,
+                title VARCHAR(255) NOT NULL,
+                author_id BIGINT NOT NULL,
+                author VARCHAR(255) NOT NULL,
+                content LONGBLOB NOT NULL,
+                serial_number VARCHAR(255),
+                category VARCHAR(255),
+                status VARCHAR(255) NOT NULL,
+                create_date DATE,
+                CONSTRAINT PK_id PRIMARY KEY (id)
+            );
+        </sql>
+        <rollback>
+            DROP TABLE articles;
+        </rollback>
+    </changeSet>
+    <changeSet id="200220197" author="test">
+        <sql>
+            CREATE TABLE comments (
+                id BIGINT NOT NULL AUTO_INCREMENT,
+                comment_body BLOB NOT NULL,
+                article_id BIGINT NOT NULL,
+                user_id BIGINT NOT NULL,
+                create_date DATETIME NOT NULL,
+                CONSTRAINT PK_id PRIMARY KEY (id),
+                CONSTRAINT fk_com_article FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE ON UPDATE
+                CASCADE
+            );
+        </sql>
+        <rollback>
+            DROP TABLE transaction;
+        </rollback>
+    </changeSet>
+ 
+ 
+</databaseChangeLog>

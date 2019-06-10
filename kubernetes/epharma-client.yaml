@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: epharma-client
+  labels:
+    app: epharma-client
+spec:
+  type: NodePort
+  ports:
+    - port: 9090
+  selector:
+    app: epharma-client
+---
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: epharma-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: epharma-client
+  template:
+    metadata:
+      labels:
+        app: epharma-client
+    spec:
+      containers:
+      - name: epharma-client
+        image: bapinaidu/epharma-client
+        ports:
+        - containerPort: 9090
